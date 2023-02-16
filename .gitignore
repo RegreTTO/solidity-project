@@ -1,5 +1,13 @@
-# Created by https://www.toptal.com/developers/gitignore/api/solidity
-# Edit at https://www.toptal.com/developers/gitignore?templates=solidity
+# Created by https://www.toptal.com/developers/gitignore/api/remix,solidity
+# Edit at https://www.toptal.com/developers/gitignore?templates=remix,solidity
+
+### Remix ###
+node_modules
+/.cache
+/build
+/public/build
+.env
+**/artifacts
 
 ### Solidity ###
 # Logs
@@ -77,7 +85,6 @@ web_modules/
 .yarn-integrity
 
 # dotenv environment variable files
-.env
 .env.development.local
 .env.test.local
 .env.production.local
@@ -132,5 +139,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# End of https://www.toptal.com/developers/gitignore/api/solidity
-
+# End of https://www.toptal.com/developers/gitignore/api/remix,solidity
