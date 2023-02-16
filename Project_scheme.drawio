@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-16T20:19:02.698Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 OPR/94.0.0.0" etag="R5--emjrrfFbh9yxiuAs" version="20.8.16" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-16T20:32:34.768Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 OPR/94.0.0.0" etag="dZAccySUYrwF2OzR_8Aw" version="20.8.16" type="github">
   <diagram name="Страница 1" id="-buf7eigM2P_84CWs5cj">
     <mxGraphModel dx="1466" dy="806" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -8,10 +8,10 @@
           <mxGeometry x="180" y="200" width="370" height="360" as="geometry" />
         </mxCell>
         <mxCell id="YaH832CK0IXa90l76nZg-5" value="Fundraising" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
-          <mxGeometry x="200" y="210" width="220" height="120" as="geometry" />
+          <mxGeometry x="195" y="210" width="340" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="YaH832CK0IXa90l76nZg-6" value="goal: uint256&#xa;current: uint256&#xa;decription: string&#xa;owner: address (?)&#xa;contributions: map(address =&gt; uint256)&#xa;opened: bool" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="YaH832CK0IXa90l76nZg-5">
-          <mxGeometry y="30" width="220" height="90" as="geometry" />
+        <mxCell id="YaH832CK0IXa90l76nZg-6" value="goal: uint256&#xa;current: uint256&#xa;decription: string&#xa;owner: address (?)&#xa;opened: bool" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="YaH832CK0IXa90l76nZg-5">
+          <mxGeometry y="30" width="340" height="90" as="geometry" />
         </mxCell>
         <mxCell id="YaH832CK0IXa90l76nZg-12" value="Structs" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="300" y="170" width="60" height="30" as="geometry" />
@@ -19,7 +19,7 @@
         <mxCell id="YaH832CK0IXa90l76nZg-13" value="Contract" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
           <mxGeometry x="640" y="50" width="520" height="520" as="geometry" />
         </mxCell>
-        <mxCell id="YaH832CK0IXa90l76nZg-14" value="var: Fundraisings: array&#xa;var: contract_owner&#xa;func: openNewFundraising&#xa;func:  closeFundraising&#xa;func: donate(Fundraising, sum)&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=14;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="YaH832CK0IXa90l76nZg-13">
+        <mxCell id="YaH832CK0IXa90l76nZg-14" value="var: Fundraisings: array&#xa;var: contract_owner&#xa;var: contributions: map(uint256 =&gt; map(adress =&gt; uint256))&#xa;func: openNewFundraising&#xa;func:  closeFundraising&#xa;func: donate(Fundraising, sum)&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=14;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="YaH832CK0IXa90l76nZg-13">
           <mxGeometry y="30" width="520" height="490" as="geometry" />
         </mxCell>
       </root>
