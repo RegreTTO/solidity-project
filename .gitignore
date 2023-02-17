@@ -8,7 +8,7 @@ node_modules
 /public/build
 .env
 **/artifacts
-
+.debugger
 ### Solidity ###
 # Logs
 logs
@@ -139,4 +139,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# End of https://www.toptal.com/developers/gitignore/api/remix,solidity
+# End of https://www.toptal.com/developers/gitignore/api/remix,solidity.debugger/
