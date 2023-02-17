@@ -21,6 +21,13 @@ contract Crowdfunding {
 	event FundraisingOpenEvent(uint256 id, address owner, string description, uint256 goal, uint256 closingTime);
 	event DonationAccepted(uint256 fundraisingId, uint256 value);
 
+	modifier IsExpired (uint256 fund_id) {
+		if (block.timestamp >= fundraisings[fund_id].closingTime) {
+			fundraisings[fund_id].opened = false;
+		}
+		_;
+	}
+
 	constructor() payable {
 		contractOwner = msg.sender;
 	}
@@ -52,8 +59,11 @@ contract Crowdfunding {
 		emit FundraisingOpenEvent(fund.id, fund.owner, fund.description, fund.goal, fund.closingTime);
 	}
 
-	function donate(uint256 _id) public payable {
+	function donate(uint256 _id) public payable IsExpired(_id){
 		require(msg.value != 0, "Wei count must be not null!");
+		if (fundraisings[_id].opened == false) {
+			revert ("Fundraising expired!");
+		}
 		fundraisings[_id].current += msg.value;
 		contributions[_id][msg.sender] += msg.value;
 
