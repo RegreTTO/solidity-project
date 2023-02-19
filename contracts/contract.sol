@@ -38,9 +38,13 @@ contract Crowdfunding {
 		contractOwner = msg.sender;
 	}
 
-	receive() external payable {}
+	receive() external payable {
+		emit EthTransfered(address(this), msg.value);
+	}
 
-	fallback() external payable {}
+	fallback() external payable {
+		emit EthTransfered(address(this), msg.value);
+	}
 
 	function openNewFundraising(
 		uint256 _goal,
@@ -68,7 +72,6 @@ contract Crowdfunding {
 
 	/// @notice Returns eth to funders if not filled_up, else transfer eth to fund. owner
 	function closeFundraising(uint256 _id) public {
-		require(fundraisings[_id].owner == msg.sender, "You're not an owner!");
 		require(fundraisings[_id].isOpened, "Fundraising is already closed!");
 		require(block.timestamp >= fundraisings[_id].closingTime, "Fundraising is not expired yet!");
 		Fundraising storage fund = fundraisings[_id];
